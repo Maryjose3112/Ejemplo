@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examne Practico</title>
+    <link rel="shortcut icon" href="./img/1553083_letter_m_red_alphabet_letters_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Manejo de memoria Dinamica en JavaScript</h1>
+        <nav class="container-nav">
+            <a class="link-nav"href="#uno">Ejercicio 1</a> 
+            <a class="link-nav"href="#dos">Ejercicio 2</a>
+            <a class="link-nav"href="#tres">Ejercicio 3</a>
+            <a class="link-nav"href="#cuatro">Ejercicio 4</a>
+            <a class="link-nav"href="#cinco">Ejercicio 5</a>
+            <a class="link-nav"href="#seis">Ejercicio 6</a>
+            
+        </nav>
+    </header>
+    <section>
+        <section id="uno" class="uno">
+            <script type="module" src="./js/1.js"></script>
+            <h2>Ejercicio 1: Cracion y Manipulación de Arreglos</h2>
+            <p>•	a) Crea un arreglo vacío y agrega 10 elementos numéricos aleatorios entre 1 y 100.<br>
+                •	b) Imprime el arreglo.<br>
+                •	c) Ordena el arreglo de menor a mayor utilizando el método sort().<br>
+                •	d) Imprime el arreglo ordenado.<br>
+                •	e) Elimina los 3 primeros elementos del arreglo.<br>
+                •	f) Agrega 5 nuevos elementos al final del arreglo.<br>
+                •	g) Imprime el arreglo final.<br>
+            <br>
+            EXPLICACION CODIGO: <br>
+            <br>
+            a)	 Se creo un arreglo llamado arregloprincipal de 10 elementos numéricos. Array.from({ length: 10 }) genera un arreglo de 10 posiciones vacías. El segundo parámetro de Array.from es una función de flecha () =>, que genera un número aleatorio entre 1 y 100 para cada posición del arreglo:<br>
+            * Math.random() genera un número decimal entre 0 y 1. <br>
+            * Math.random() * 100 lo convierte en un número entre 0 y 99. <br>
+            * Math.floor() redondea hacia abajo para obtener un número entero. <br>
+            * Sumamos +1 para obtener un rango entre 1 y 100. <br>
+            b)	 Por medio de un console.log() se imprime el arreglo principal con los 10 valores generado aleatoriamente. <br>
+            c)	 Ordena el arreglo arregloprincipal de menor a mayor y guarda el resultado en la variable arregloordenado.sort((a, b) => a - b) es una función de comparación que le dice a sort cómo ordenar los números. Si a - b es negativo, a va antes que b; si es positivo, b va antes que a. <br>
+            d)	 Igual que el anterior imprime el arreglo generado aleatoriamente pero ahora de forma ordenada. <br>
+            e)	 Elimina los primeros 3 elementos del arreglo arregloordenado usando splice(0, 3), que significa "comienza en el índice 0 y elimina 3 elementos". agrega 5 nuevos elementos al final del arreglo arregloordenado: <br>
+            * Array.from({ length: 5 }) crea un nuevo arreglo de 5 elementos. <br>
+            * Cada nuevo número se genera de manera aleatoria entre 1 y 100. <br>
+            * push(...nuevoArreglo) inserta los nuevos 5 números al final del arreglo arregloordenado. <br>
+            f)	 Y por ultimo se imprime el nuevo arreglo creado que se basa principalmente en eliminar los primero tres valores del arreglo ordenado y se le agregan cinco valores nuevos aleatoriamente.  <br>          
+            </p>
+        </section>
+
+        <section id="dos">
+            <script type="module" src="./js/2.js"></script>
+            <h2>Ejercicio 2: Gestión de Objetos</h2>
+            <p>
+•	a) Crea un objeto que represente a una persona con las propiedades: nombre, edad y ciudad.<br>
+•	b) Agrega una nueva propiedad llamada "hobbies" que sea un arreglo de cadenas.<br>
+•	c) Elimina la propiedad "edad".<br>
+•	d) Crea una función que reciba un objeto persona y devuelva un nuevo objeto con las mismas propiedades, pero con la edad incrementada en 1.<br>
+           <br>
+           EXPLICACION CODIGO: <br>
+           <br>
+           a) Se crea un objeto llamado persona que tiene tres propiedades: <br>
+* nombre: el valor es la cadena "Maryjose". <br>
+* edad: el valor es el número 18. <br>
+* ciudad: el valor es la cadena "Durango". <br>
+Este objeto es una representación básica de una persona con estas tres 
+características. Se imprime persona con sus tres principales propiedades. <br>
+b) Luego se agrega una nueva propiedad al objeto persona llamada hobbies, que es un 
+arreglo de cadenas. Cada cadena representa un pasatiempo o afición que tiene esta 
+persona: <br>
+* "leer", <br>
+* "danza", <br>
+* "música". <br>
+El objeto ahora tiene cuatro propiedades: nombre, edad, ciudad y hobbies. Ahora se 
+imprimirá con las nuevas propiedades agregadas. <br>
+c) Luego en la línea siguiente se utiliza el método delate en el cual se elimina la 
+propiedad edad del objeto persona. Después de ejecutar este código, el objeto ya 
+no tendrá la propiedad edad, por lo que dejará de existir en el objeto. <br>
+d) Se creo la función incrementarEdad que esta toma un objeto personaOriginal como 
+argumento, hace una copia de ese objeto y devuelve una nueva versión con la 
+propiedad edad incrementada en 1, si es que el objeto tiene la propiedad edad.
+Luego con el let nuevaPersona; se crea una copia del objeto original usando el 
+operador de propagación (...). Esto es importante porque queremos modificar el 
+nuevo objeto sin alterar el original. <br>
+Si la propiedad edad existe en el objeto original (if (personaOriginal.edad)), entonces 
+la incrementa en 1 y la asigna a la copia del objeto: nuevaPersona.edad = 
+personaOriginal.edad + 1;.
+La función devuelve el objeto nuevaPersona, que es una copia del objeto original 
+con la posible modificación en la edad. A su ves se imprime con la nueva 
+modificación que es que la edad se le ha incrementado uno. <br>
+e) Luego en la línea siguiente se utiliza el método delate en el cual se elimina la 
+propiedad edad del objeto persona. Después de ejecutar este código, el objeto ya 
+no tendrá la propiedad edad, por lo que dejará de existir en el objeto.
+           <br>
+           </p>
+        </section>
+        
+        <section id ="tres">
+            <script type="module" src="./js/3.js"></script>
+            <h2>Ejercicio 3: Referencias y Copias</h2>
+            <p>
+•	a) Crea dos variables, a y b, y asígnales el mismo objeto.<br>
+•	b) Modifica una propiedad del objeto a través de a.<br>
+•	c) Imprime ambos objetos. ¿Qué observas?<br>
+•	d) Explica por qué se produce este comportamiento y cómo evitarlo.<br>
+<br>
+EXPLICACION CODIGO: <br>
+<br>
+a) Se crea una variable a y se le asigna un objeto con dos propiedades: <br>
+o nombre: una cadena con el valor "Aurora". <br>
+o edad: un número con el valor 37. <br>
+En lugar de crear un nuevo objeto para b, se hace que b apunte al mismo objeto que 
+a. Esto significa que ambas variables a y b ahora apuntan al mismo objeto en 
+memoria. Si se modifica el objeto usando a o b, ambos "verán" los mismos cambios 
+porque están referenciando el mismo objeto. <br>
+b) En este caso, se modifica la propiedad edad del objeto usando la variable a. Como b 
+también está apuntando al mismo objeto, esta modificación también será visible 
+cuando se acceda a través de b. <br>
+c) Esto imprime el contenido actual del objeto referenciado por a. Como a ha sido 
+usado para modificar la propiedad edad. Como b apunta al mismo objeto que a, 
+también se verá reflejada la misma modificación en b. <br>
+Este comportamiento se debe a que en JavaScript los objetos son referenciados. Esto 
+significa que cuando asignas un objeto a una variable, lo que realmente se almacena en la 
+variable es una referencia (una dirección de memoria) que apunta al objeto, no una copia 
+del objeto en sí. Tanto a como b apuntan al mismo objeto en memoria. Modificar el objeto 
+a través de a (cambiando la propiedad edad a 35) afecta tanto a “a” como a b porque 
+ambos comparten el mismo objeto. El resultado en consola mostrará el mismo objeto para 
+a y b porque no se trata de dos objetos diferentes, sino del mismo objeto referenciado por 
+ambas variables.
+            </p>
+        </section>
+        <section id="cuatro">
+            <script type="module" src="./js/4.js"></script>
+            <h2>Ejercicio 4: Clases</h2>
+            <p>
+                •	a) Crea una clase llamada Nodo, que tenga 3 propiedades:<br>
+* back<br>
+* data<br>
+* next<br>
+•	b) Crea tres variables llamadas nodo1, nodo2, nodo3 y en cada variable realiza una instancia de Nodo.<br>
+•	c) Asigna un valor a la propiedad data de cada una las variables.<br>
+•	d) A la propiedad next de nodo1 asígnale como valor la variable nodo2 y a la propiedad next de nodo2 asígnale como valor la variable nodo3, a la propiedad next de nodo3 asígnale el valor de null.<br>
+•	e) A la propiedad back de nodo1 asígnale el valor de null, a la propiedad back de nodo2 asígnale la variable nodo1. A la propiedad back de nodo3 asígnale como valor la variable nodo2.<br>
+•	g) Imprime las tres variables y explica que está sucediendo.<br>
+<br>
+EXPLICACION CODIGO: <br>
+<br>
+a) Se crea una clase que se utiliza para crear nodos que serán parte de una lista 
+enlazada. Cada nodo tiene: <br>
+* data: Almacena el valor o dato del nodo. <br>
+* next: Un puntero (referencia) al siguiente nodo en la lista. <br>
+* back: Un puntero (referencia) al nodo anterior en la lista. <br>
+b) se crean tres instancias de la clase Nodo, cada una con un valor diferente. Aunque 
+los nodos ya se inicializaron con valores en el constructor, este código vuelve a 
+asignar esos mismos valores. Este paso es innecesario ya que los valores ya se 
+establecieron al crear los nodos. <br>
+c) Estableciendo las referencias next: <br>
+* nodo1.next = nodo2;: Esto significa que el siguiente nodo después de nodo1 es 
+nodo2. <br>
+* nodo2.next = nodo3;: Esto significa que el siguiente nodo después de nodo2 es 
+nodo3. <br>
+* nodo3.next = null;: Como nodo3 es el último nodo de la lista, no tiene un 
+siguiente nodo, por lo que se establece su next en null.
+Estableciendo las referencias back: <br>
+* nodo1.back = null;: nodo1 es el primer nodo, por lo que no hay nodo anterior, 
+así que su back es null. <br>
+* nodo2.back = nodo1;: nodo2 tiene como nodo anterior a nodo1. <br>
+* nodo3.back = nodo2;: nodo3 tiene como nodo anterior a nodo2 <br>
+d) Este código imprime en la consola la información de cada nodo. Al imprimir un nodo, 
+se mostrará su data, next, y back. El código proporciona una base para gestionar una 
+lista doblemente enlazada, lo que permite añadir, eliminar o recorrer nodos de 
+manera eficiente en ambas direcciones. <br>
+
+            </p>
+        </section>
+
+        <section id="cinco">
+            <script type="module" src="./js/5.js"></script>
+            <h2>Ejercicio 5: Filtrado y Mapeo de Arreglos</h2>
+            <p>
+                •	a) Crea un arreglo de 10 objetos que representen a productos con propiedades como nombre, precio y categoría.<br>
+•	b) Utiliza los métodos filter() y map() para crear un nuevo arreglo que contenga solo los productos de una categoría específica y con un precio mayor a 100.<br>
+•	c) Explica cómo funcionan estos métodos y cuál es su utilidad.<br>
+<br>
+EXPLICACION CODIGO: <br>
+<br>
+a) Se crea un arreglo llamado productos, donde cada elemento es un objeto con tres 
+propiedades: <br>
+* nombre: el nombre del producto. <br>
+* precio: el precio del producto. <br>
+* categoría: la categoría a la que pertenece el producto. <br>
+b) Se utilizan los métodos filter () y map () para crear un nuevo arreglo basado en ciertas 
+condiciones: <br>
+* filter() toma una función que verifica una condición para cada elemento del arreglo 
+productos. La condición en este caso es que el producto debe pertenecer a la 
+categoría "Electrónica" y tener un precio mayor a 100.Solo los productos que 
+cumplan ambas condiciones pasarán al siguiente paso. <br>
+* Map () se utiliza para crear un nuevo arreglo, transformando los objetos filtrados. En 
+este caso, solo se extraen y devuelven dos propiedades del producto: nombre y 
+precio. Así, el nuevo arreglo contendrá objetos con solo esas dos propiedades, 
+omitiendo la categoría. <br>
+c) Este console.log imprimirá el resultado del filtro y mapeo, que será un arreglo con 
+los productos de la categoría "Electrónica" y con un precio mayor a 100. <br>
+
+            </p>
+        </section>
+        <section id ="seis">
+            <script type="module" src="./js/6.js"></script>
+            <h2>Ejercicio 6: Validacion</h2>
+            <p>
+                •	a)  Escribe una función que divida dos números.<br>
+•	 b) Maneja la excepción que se produce cuando se intenta dividir por cero.<br>
+•  	c) Implementa una lógica para evitar que se ingresen valores no numéricos.<br>
+<br>
+EXPLICACION CODIGO: <br>
+<br>
+a)  La función dividir toma dos parámetros, a y b, que serán los números a dividir (donde 
+a es el dividendo y b es el divisor). <br>
+b)  Se verifica si alguno de los dos valores (a o b) no es de tipo numérico usando el 
+operador typeof. Si alguno no es un número, se lanza un error con el mensaje: 
+"Ambos valores deben ser numéricos.". <br>
+c)  Luego, se verifica si el valor de b (el divisor) es igual a 0. <br>
+d)  Si b es 0, se lanza un error con el mensaje: "No se puede dividir por cero.", ya que la 
+división por cero es indefinida o no permitida en la mayoría de los lenguajes de 
+programación. <br>
+e)  Si los valores son válidos y no se ha lanzado ningún error, se realiza la división de a 
+entre b y se retorna el resultado. <br>
+
+            </p>
+
+        </section>
+    
+</body>
+</html>

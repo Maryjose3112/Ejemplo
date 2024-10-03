@@ -1,0 +1,120 @@
+body{
+    margin: 0 1rem 0 0;
+    padding: 0;
+    background: linear-gradient(117deg, rgba(226,37,37,1) 11%, rgba(45,105,253,1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    /*overflow: hidden; */
+    color: azure;
+    font-family: "regular";
+    text-align: justify;
+
+}
+h1{
+    font-family: "titulo1";
+    font-size: 3rem;
+}
+h2{
+    font-family: "titulo1";
+    font-size: 2rem;
+}
+p{
+    font-family: "regular";
+    font-size: 1rem;
+
+}
+
+header{
+    height: 12rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+.title{
+    margin: 0 1rem 0 0;
+}
+.container-nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.link-nav{
+    background-color: #fff;
+    padding: 1rem;
+    width: 10rem;
+    height: 1rem;
+    margin: 1rem 1rem 0 0;
+    border: solid 5px #1ee3c9;
+    border-radius: .6rem;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    color: #000000; 
+    font-size: 2rem;
+}
+.uno{
+    margin-top: 13rem;
+}
+@font-face {
+    font-family: "regular";
+    src: url("..//font/CaviarDreams_Italic.ttf");
+
+}
+@font-face {
+    font-family: "titulo1";
+    src: url("..//font/NewYork\ PERSONAL\ USE.otf");
+
+}
+
+h1{
+    font-family: "titulo1";
+    font-size: 3rem;
+}
+h2{
+    font-family: "titulo1";
+    font-size: 2rem;
+}
+p{
+    font-family: "regular";
+    font-size: 1rem;
+}
+
+header{
+    height: 12rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+.title{
+    margin: 0 1rem 0 0;
+}
+.container-nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.link-nav{
+    background-color: #fff;
+    padding: 1rem;
+    width: 10rem;
+    height: 1rem;
+    margin: 1rem 1rem 0 0;
+    border: solid 5px #1ee3c9;
+    border-radius: .6rem;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+    color: #000000; 
+}
+.uno{
+    margin-top: 13rem;
+}
+@font-face {
+    font-family: "regular";
+    src: url("..//font/CaviarDreams_Italic.ttf");
+
+}
+@font-face {
+    font-family: "titulo1";
+    src: url("..//font/NewYork\ PERSONAL\ USE.otf");
+
+}
